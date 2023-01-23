@@ -1,0 +1,38 @@
+{
+  "jobs": [
+    {
+      "id": "Q-rvFHBFQlcdrHS82aILs",
+      "userId": "MYDaA3XWnM001iSUZ7ijl",
+      "enabled": true,
+      "name": "Stadt Augsburg - Wohnungen u. WG-Zimmer",
+      "blacklist": [],
+      "provider": [
+        {
+          "name": "Wg gesucht",
+          "id": "wgGesucht",
+          "url": "https://www.wg-gesucht.de/wg-zimmer-in-Augsburg.2.0.1.0.html?user_filter_id=7724798&offer_filter=1&city_id=2&noDeact=1&wgSea=2&wgMnF=2&wgAge=31&categories%5B0%5D=0&rent_types%5B0%5D=2"
+        },
+        {
+          "name": "Ebay Kleinanzeigen",
+          "id": "kleinanzeigen",
+          "url": "https://www.ebay-kleinanzeigen.de/s-wohnung-mieten/augsburg/anzeige:angebote/c203l7518r10+wohnung_mieten.qm_d:30.00%2C+wohnung_mieten.zimmer_d:%2C2.0"
+        },
+        {
+          "name": "Ebay Kleinanzeigen",
+          "id": "kleinanzeigen",
+          "url": "https://www.ebay-kleinanzeigen.de/s-auf-zeit-wg/augsburg/anzeige:angebote/c199l7518r14+auf_zeit_wg.mietart_s:unbefristet"
+        }
+      ],
+      "notificationAdapter": [
+        {
+          "id": "telegram",
+          "name": "Telegram",
+          "fields": {
+            "token": "5776890311:AAF9NOcepoICYRcENh_DNMYEDt0jP_xeQHs",
+            "chatId": "1700608490"
+          }
+        }
+      ]
+    }
+  ]
+}
