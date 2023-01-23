@@ -31,6 +31,7 @@ setInterval(
     const isDuringWorkingHoursOrNotSet = duringWorkingHoursOrNotSet(config, Date.now());
 
     if (isDuringWorkingHoursOrNotSet) {
+      console.log(`Running as scheduled (every ${config.interval} minutes)`);
       config.lastRun = Date.now();
       const fetchedProvider = provider
         .filter((provider) => provider.endsWith('.js'))
