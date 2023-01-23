@@ -13,8 +13,8 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: {
-          host: '0.0.0.0',
-          protocol: 'http:',
+          host: '216.24.57.3',
+          protocol: 'https:',
           port: 9998,
         },
       },
