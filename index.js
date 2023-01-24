@@ -1,3 +1,5 @@
+// import process from 'node:process';
+
 const fs = require('fs');
 var http_test = require('http');
 
@@ -27,6 +29,12 @@ const INTERVAL = config.interval * 60 * 1000;
 /* eslint-disable no-console */
 console.log(`Started Fredy successfully. Ui can be accessed via http://localhost:${config.port}`);
 /* eslint-enable no-console */
+
+console.log(process.env);
+if (process.getuid) {
+  console.log(`Current uid: ${process.getuid()}`);
+}
+
 setInterval(
   (function exec() {
     const isDuringWorkingHoursOrNotSet = duringWorkingHoursOrNotSet(config, Date.now());
