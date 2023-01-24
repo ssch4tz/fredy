@@ -1,4 +1,5 @@
 const fs = require('fs');
+var http_test = require('http');
 
 //if db folder does not exist, ensure to create it before loading anything else
 if (!fs.existsSync('./db')) {
@@ -30,6 +31,9 @@ setInterval(
   (function exec() {
     const isDuringWorkingHoursOrNotSet = duringWorkingHoursOrNotSet(config, Date.now());
 
+    // http-request own website to keep onrender.com free-service up and running.
+    httpGetSelf();
+
     if (isDuringWorkingHoursOrNotSet) {
       console.log(`Running as scheduled (every ${config.interval} minutes)`);
       config.lastRun = Date.now();
@@ -59,3 +63,32 @@ setInterval(
   })(),
   INTERVAL
 );
+
+function httpGetSelf(){
+  console.log('httpGetSelf executed');
+  var options = {
+    host: 'https://fredy-v26n.onrender.com/',
+    path: '/index.html',
+    port: 5173
+  };
+
+  var req = http_test.get(options, function(res) {
+    console.log('STATUS: ' + res.statusCode);
+    // console.log('HEADERS: ' + JSON.stringify(res.headers));
+
+    // Buffer the body entirely for processing as a whole.
+    // var bodyChunks = [];
+    // res.on('data', function(chunk) {
+    //   // You can process streamed parts here...
+    //   bodyChunks.push(chunk);
+    // }).on('end', function() {
+    //   var body = Buffer.concat(bodyChunks);
+    //   console.log('BODY: ' + body);
+    //   // ...and/or process the entire body here.
+    // })
+  });
+
+  req.on('error', function(e) {
+    console.log('ERROR: ' + e.message);
+  });
+}
