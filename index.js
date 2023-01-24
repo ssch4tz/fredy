@@ -30,7 +30,7 @@ const INTERVAL = config.interval * 60 * 1000;
 console.log(`Started Fredy successfully. Ui can be accessed via http://localhost:${config.port}`);
 /* eslint-enable no-console */
 
-console.log(process.env);
+// console.log(process.env);
 if (process.getuid) {
   console.log(`Current uid: ${process.getuid()}`);
 }
@@ -75,7 +75,7 @@ setInterval(
 function httpGetSelf(){
   console.log('httpGetSelf executed');
   var options = {
-    host: 'https://fredy-v26n.onrender.com/',
+    host: 'fredy-v26n.onrender.com',
     path: '/index.html',
     port: 5173
   };
