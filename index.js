@@ -76,8 +76,7 @@ function httpGetSelf(){
   console.log('httpGetSelf executed');
   var options = {
     host: 'fredy-v26n.onrender.com',
-    path: '/index.html',
-    port: 5173
+    path: '/index.html'
   };
 
   var req = http_test.get(options, function(res) {
