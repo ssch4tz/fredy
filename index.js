@@ -1,7 +1,7 @@
 // import process from 'node:process';
 
 const fs = require('fs');
-var http_test = require('http');
+var https_test = require('https');
 
 //if db folder does not exist, ensure to create it before loading anything else
 if (!fs.existsSync('./db')) {
@@ -76,12 +76,13 @@ function httpGetSelf(){
   console.log('httpGetSelf executed');
   var options = {
     host: 'fredy-v26n.onrender.com',
-    path: '/index.html'
+    path: '/index.html',
+    protocol: 'https:'
   };
 
-  var req = http_test.get(options, function(res) {
+  var req = https_test.get(options, function(res) {
     console.log('STATUS: ' + res.statusCode);
-    // console.log('HEADERS: ' + JSON.stringify(res.headers));
+    console.log('HEADERS: ' + JSON.stringify(res.headers));
 
     // Buffer the body entirely for processing as a whole.
     // var bodyChunks = [];
