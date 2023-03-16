@@ -21,6 +21,11 @@
           "name": "Ebay Kleinanzeigen",
           "id": "kleinanzeigen",
           "url": "https://www.ebay-kleinanzeigen.de/s-auf-zeit-wg/augsburg/anzeige:angebote/c199l7518r14+auf_zeit_wg.mietart_s:unbefristet"
+        },
+        {
+          "name": "Augsburger Allgemeine Immobilien",
+          "id": "immobilienaa",
+          "url": "https://immobilien.augsburger-allgemeine.de/suchergebnisse?l=Augsburg&r=0km&_multiselect_r=0km&t=apartment%3Arental%3Aliving&a=de.augsburg&pf=&pt=&rf=0&rt=2&sf=&st=&yf=&yt=&ff=&ft=&s=relevance&pa=&o=&ad=&u="
         }
       ],
       "notificationAdapter": [
